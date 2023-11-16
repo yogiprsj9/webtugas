@@ -30,14 +30,23 @@
             <a href="#home">Home</a>
             <a href="#about">Tentang Kami</a>
             <a href="#menu">Menu</a>
+            <a href="#products">Product</a>
             <a href="#contact">Kontak</a>
         </div>
 
         <div class="navbar-extra">
-            <a href="#" id="search"><i data-feather="search"></i></a>
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
             <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
+
+        <!-- Search Form start -->
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box"><i data-feather="search"></i></label>
+        </div>
+        <!-- Search Form end -->
+
     </nav>
     <!-- Navbar end -->
 
@@ -57,16 +66,19 @@
 
         <div class="row">
             <div class="about-img">
-                <img src="img/tentang-kami.jpeg" alt="Tentang Kami" style="max-width: 65%; height: 100%;">
+                <img class="img-aboutUs" src="img/tentang-kami.jpeg" alt="Tentang Kami" style="max-width: 65%; height: 100%;">
             </div>
         </div>
         <div class="content">
-            <h3>Selamat datang di bangsawankopi!</h3>
+            <h3><span>Selamat datang di </span>bangsawankopi!</h3>
             <p>Kami adalah coffee shop yang berkomitmen untuk memberikan pengalaman kopi terbaik kepada Anda. 
                 Didirikan dengan cinta mendalam terhadap kopi, bangsawankopi berdedikasi untuk menjadi tujuan utama para pecinta kopi.</p>
                 <br>
             <p>Kami juga berkomitmen untuk mendukung petani kopi berkelanjutan, 
                 sehingga setiap cangkir kopi di bangsawankopi turut membantu mewujudkan kopi yang berkelanjutan. </p>
+                <br>
+            <p>Kami adalah mahasiswa Gunadarma University angkatan 2022 jurusan Sistem Informasi kelas 2KA22, 
+                Nama Kami adalah Farid Fadilah, Muhammad Yogi Prasojo, Rheihandra A, Dan Zolla Aldila P. </p>
         </div>
     </div>
     </section>
@@ -123,6 +135,25 @@
                 </div>
     </section>
     <!-- Menu Section end -->
+
+<!-- Products Section start -->
+<section class="products" id="products">
+    <h2><span>Produk Unggulan </span>Para Bangsawan.</h2>
+    <p>Kami menjual biji kopi pilihan dengan grade tinggi dan berkualitas hasil budidaya para 
+        petani lokal yang akan menghasilkan seduhan yang khas dan bercita rasa.</p>
+
+        <div class="row">
+            <div class="product-card">
+                <a href="#"><i data-feather="shopping-cart"></i></a>
+                <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+            </div>
+            <div class="product-image">
+                <img src="" alt="Product 1">
+              </div>
+        </div>
+</section>
+<!-- Products Section end -->
+
 
     <!-- Contact Section start -->
     <section id="contact" class="contact">

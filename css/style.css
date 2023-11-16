@@ -85,6 +85,40 @@ body {
     display: none;
 }
 
+/* Navbar search form */
+.navbar .search-form {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: #fff;
+    width: 50rem;
+    height: 3.4rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.navbar .search-form.active {
+    transform: scaleY(1);
+}
+
+.navbar .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: #010101;
+    padding: 1rem;
+}
+
+.navbar .search-form label {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bg);
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -104,7 +138,7 @@ body {
     width: 100%;
     height: 20%;
     bottom: 0;
-    background: linear-gradient(0deg, rgba(1, 1, 3, 0.5)); /* Penyesuaian latar belakang linear gradient */
+    background: linear-gradient(0deg, rgba(1, 1, 3, 0.5));
 }
 
 .hero .content {
@@ -117,6 +151,10 @@ body {
     color: #fff;
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
     line-height: 1;
+}
+
+.img-aboutUs {
+    border-radius: 15px;
 }
 
 .hero .content p {
@@ -142,18 +180,18 @@ body {
 }
 
 /*  About Section */
-.about, .menu .contact {
-    padding: 2rem 7% 1.4rem;
+.about, .menu .contact, .products {
+    padding: 1rem 7% 1.4rem;
 }
 
-.about h2, .menu h2, .contact h2 {
+.about h2, .menu h2, .contact h2, .products h2 {
     text-align: center;
     font-size: 2.6rem;
     margin-bottom: 3rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 
-.about h2 span, .menu h2 span, .contact h2 span {
+.about h2 span, .menu h2 span, .contact h2 span, .products h2 span {
     color: darkcyan;
 }
 
@@ -190,11 +228,17 @@ body {
 .content h3 {
     text-align: center;
     margin-top: 1%;
+    font-size: 2rem;
 }
+
+h3 span {
+    color: darkcyan; 
+}
+
 
 .content p {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 300;
     line-height: 1.6;
 }
@@ -202,12 +246,13 @@ body {
 .menu h2, .contact h2 {
     margin-bottom: 0;
 }
-.menu p, .contact p {
+.menu p, .contact p, .products p {
     text-align: center;
     max-width: 70rem;
     margin: auto;
     font-weight: 100;
     line-height: 1.6;
+    font-size: 1.2rem;
 }
 
 .menu .row {
@@ -329,44 +374,102 @@ footer .credit a {
 /* Laptop */
 @media (max-width: 1366px) {
     html {
-        font-size: 100%; /* Reset font size to default (100%) */
+      font-size: 85%;
     }
-
+  }
+  
+  /* Tablet */
+  @media (max-width: 758px) {
+    html {
+      font-size: 62.5%;
+    }
+  
     #hamburger-menu {
-        display: none; /* Hide the hamburger menu on laptops */
+      display: inline-block;
     }
-
+  
     .navbar .navbar-nav {
-        position: static; /* Reset position to static for laptop screens */
-        background-color: transparent; /* Reset background color for laptop screens */
-        width: auto; /* Reset width to auto for laptop screens */
-        height: auto; /* Reset height to auto for laptop screens */
-        transition: none; /* Remove transition on laptop screens */
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      background-color: #fff;
+      width: 30rem;
+      height: 100vh;
+      transition: 0.3s;
     }
-
+  
+    .navbar .navbar-nav.active {
+      right: 0;
+    }
+  
     .navbar .navbar-nav a {
-        color: #fff;
-        display: inline-block;
-        margin: 0 1rem;
-        padding: 0;
-        font-size: 1.3rem;
+      color: var(--bg);
+      display: block;
+      margin: 1.5rem;
+      padding: 0.5rem;
+      font-size: 2rem;
     }
-
+  
     .navbar .navbar-nav a::after {
-        content: none; /* Remove the underline on laptop screens */
+      transform-origin: 0 0;
     }
-}
-
-/* Tablet */
-@media (max-width: 768px) {
+  
+    .navbar .navbar-nav a:hover::after {
+      transform: scaleX(0.2);
+    }
+  
+    .navbar .search-form {
+      width: 90%;
+      right: 2rem;
+    }
+  
+    .about .row {
+      flex-wrap: wrap;
+    }
+  
+    .about .row .about-img img {
+      height: 24rem;
+      object-fit: cover;
+      object-position: center;
+    }
+  
+    .about .row .content {
+      padding: 0;
+    }
+  
+    .about .row .content h3 {
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+  
+    .about .row .content p {
+      font-size: 1.6rem;
+    }
+  
+    .menu p {
+      font-size: 1.2rem;
+    }
+  
+    .contact .row {
+      flex-wrap: wrap;
+    }
+  
+    .contact .row .map {
+      height: 30rem;
+    }
+  
+    .contact .row form {
+      padding-top: 0;
+    }
+  
+    .modal-content {
+      flex-wrap: wrap;
+    }
+  }
+  
+  /* Mobile Phone */
+  @media (max-width: 450px) {
     html {
-        font-size: 62.5%;
+      font-size: 55%;
     }
-}
-
-/* Mobile Phone */
-@media (max-width: 450px) {
-    html {
-        font-size: 55%;
-    }
-}
+  }
